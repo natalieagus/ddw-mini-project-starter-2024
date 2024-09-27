@@ -2,7 +2,7 @@
     <head>
         <title>{{title}}</title>
         <script type="module">
-            import * as library from "{{ url_for('static', filename='__target__/library.js') }}";
+            import * as library from "{{ url_for('serve_js', filename='library.js') }}";
             window.library = library;
         </script>
         

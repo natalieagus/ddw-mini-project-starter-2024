@@ -2,24 +2,23 @@
     <head>
         <title>{{title}}</title>
         <script type="module">
-            import * as library from "{{ url_for('static', filename='__target__/library.js') }}";
+            import * as library from "{{ url_for('serve_js', filename='library.js') }}";
             window.library = library;
         </script>
     </head>
     <body>
         <h1>Welcome to {{title}}</h1>
         <p>
-        	In this project you will generate some random number and sort them.
+            In this project you will generate some random number and sort them.
         </p>
         <p>
-        	<div id="generate">...</div>
-        	<button onclick="library.generate()">Generate 10 numbers</button>
+            <div id="generate">...</div>
+            <button onclick="library.generate()">Generate 10 numbers</button>
         </p>
         <p>
-        	<div id="sorted">...</div>
-        	<button onclick="library.sortnumber1()">Sort</button>
+            <div id="sorted">...</div>
+            <button onclick="library.sortnumber1()">Sort</button>
         </p>
         <br><a href="index">Home</a>
-
     </body>
 </html>
