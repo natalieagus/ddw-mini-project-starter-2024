@@ -1,3 +1,7 @@
+import mimetypes
+mimetypes.add_type('text/javascript', '.js')
+mimetypes.add_type('text/css', '.css')
+
 from flask import Flask
 from app.middleware import PrefixMiddleware
 
